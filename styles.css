@@ -1,6 +1,31 @@
 @import "reset.css";
 
+* {
+  outline: 1px solid red;
+  border-radius: 10px;
+}
+
+#column {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+body {
+  background-color: gray;
+}
+
 h1 {
   font-family: Helvetica, sans-serif;
   font-size: 2em;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 2em;
+  padding: 1rem;
 }
