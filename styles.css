@@ -1,39 +1,48 @@
-@import "reset.css";
+@import 'reset.css';
 
 * {
-  outline: 1px solid red;
+  outline: 1px solid hotpink;
   border-radius: 10px;
 }
 
-#main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  padding: 1rem;
+html {
+  --darkblue: #1f2937;
+  --white: #f9faf8;
 }
 
 body {
-  background-color: gray;
+  height: 100vh;
+  background-color: var(--darkblue);
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  font-size: 1.5em;
+  color: var(--white);
+  padding: 1rem;
 }
 
 h1 {
-  font-family: Helvetica, sans-serif;
   font-size: 2em;
+  color: var(--white);
   padding: 1rem;
-  display: flex;
-  justify-content: center;
 }
 
 h2 {
-  font-family: Helvetica, sans-serif;
   font-size: 2em;
+  color: var(--white);
+  padding: 1rem;
+}
+
+h3 {
+  font-size: 5em;
   padding: 1rem;
 }
 
 button {
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
   font-size: 1.5em;
+  color: var(--white);
+  background: none;
   padding: 1rem;
   margin: 1rem;
 }
