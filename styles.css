@@ -6,8 +6,8 @@
 }
 
 html {
-  --darkblue: #1f2937;
   --white: #f9faf8;
+  --darkblue: #1f2937;
 }
 
 body {
@@ -16,33 +16,39 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-p {
-  font-size: 1.5em;
-  color: var(--white);
-  padding: 1rem;
-}
-
-h1 {
+.intro {
   font-size: 2em;
   color: var(--white);
-  padding: 1rem;
-}
-
-h2 {
-  font-size: 2em;
-  color: var(--white);
-  padding: 1rem;
-}
-
-h3 {
-  font-size: 5em;
-  padding: 1rem;
 }
 
 button {
-  font-size: 1.5em;
+  font-size: 1em;
   color: var(--white);
   background: none;
   padding: 1rem;
   margin: 1rem;
+}
+
+.score {
+  font-size: 2em;
+  color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+.score p {
+  font-size: 2em;
+  text-align: center;
+  padding: 1rem;
+}
+
+.match {
+  color: var(--white);
+  font-size: 2em;
+}
+
+.hands {
+  font-size: 3em;
 }
