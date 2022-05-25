@@ -1,59 +1,85 @@
 @import 'reset.css';
 
 * {
-  outline: 1px solid hotpink;
-  border-radius: 10px;
+    outline: 1px solid hotpink;
+    border-radius: 10px;
 }
 
 html {
-  --white: #f9faf8;
-  --darkblue: #1f2937;
+    --white: #f9faf8;
+    --darkblue: #1f2937;
 }
 
 body {
-  height: 100vh;
-  background-color: var(--darkblue);
-  font-family: Helvetica, sans-serif;
+    height: 100vh;
+    background-color: var(--darkblue);
+    font-family: Helvetica, sans-serif;
 }
 
 .intro {
-  font-size: 2em;
-  color: var(--white);
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+    font-size: 2em;
+    color: var(--white);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 button {
-  font-size: 1em;
-  color: var(--white);
-  background: none;
-  padding: 1rem;
-  margin: 1rem;
+    font-size: 1em;
+    color: var(--white);
+    background: none;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 .score {
-  font-size: 2em;
-  color: var(--white);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
+    font-size: 2em;
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
 }
 
 .score p {
-  font-size: 2em;
-  text-align: center;
-  padding: 1rem;
+    font-size: 2em;
+    text-align: center;
+    padding: 1rem;
 }
 
 .match {
-  color: var(--white);
-  font-size: 2em;
+    color: var(--white);
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.winner {
+    color: var(--white);
+    text-align: center;
 }
 
 .hands {
-  font-size: 3em;
+    font-size: 3em;
+}
+
+.hands,
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
 }

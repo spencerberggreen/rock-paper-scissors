@@ -3,6 +3,25 @@
 // decide who wins
 // tell user who wins
 
-const computerChoice = document.getElementById('computer-choice');
-const userChoice = document.getElementById('user-choice');
-const result = document.getElementById('result');
+const game = () => {
+    // prevents global variables
+
+    let pScore = 0;
+    let cScore = 0;
+
+    const startGame = () => {
+        const playBtn = document.querySelector('.intro button');
+        const introScreen = document.querySelector('.intro');
+        const match = document.querySelector('.match');
+
+        playBtn.addEventListener('click', () => {
+            introScreen.classList.add('fadeOut');
+        });
+    };
+
+    //call all inner function
+    startGame();
+};
+
+//start the game
+game();
