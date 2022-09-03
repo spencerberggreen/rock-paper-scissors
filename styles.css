@@ -1,27 +1,65 @@
 @import 'reset.css';
 
 /* display outlines for dev */
-/* * {
+
+* {
     outline: 1px solid hotpink;
     border-radius: 10px;
-} */
+}
 
 /* global color variables */
-html {
+
+:root {
+    /* fallback system fonts */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    /* preferred fonts */
+    font-family: Arial, Helvetica, sans-serif;
+    /* color palette */
     --white: #f9faf8;
+    --lightblue: #2d3c51;
     --darkblue: #1f2937;
 }
 
+/* structure */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    height: 100vh;
     background-color: var(--darkblue);
-    font-family: Helvetica, sans-serif;
+    color: var(--white);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: var(--lightblue);
+    border-radius: 3vmin;
+    height: 90vh;
+    width: 90vw;
+    border: 2vmin solid var(--lightblue);
+}
+
+.game {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .intro {
     font-size: 2em;
     color: var(--white);
     height: 50vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +68,7 @@ body {
 }
 
 /* styles all buttons */
+
 button {
     font-size: 1em;
     color: var(--white);
@@ -39,9 +78,11 @@ button {
 }
 
 /* scoreboard header */
+
 .score {
     font-size: 2em;
     color: var(--white);
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -49,6 +90,7 @@ button {
 }
 
 /* scoreboard count */
+
 .score p {
     font-size: 2em;
     text-align: center;
@@ -58,14 +100,13 @@ button {
 .match {
     color: var(--white);
     font-size: 2em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    transform: translate(0%, -100%);
     transition: opacity 0.5s ease 0.5s;
 }
 
 /* title and match status */
+
 .winner {
     color: var(--white);
     text-align: center;
@@ -80,6 +121,7 @@ button {
 }
 
 /* flip player hand image */
+
 .player-hand {
     transform: rotateY(180deg);
 }
