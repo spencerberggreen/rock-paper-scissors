@@ -2,10 +2,10 @@
 
 /* display outlines for dev */
 
-* {
+/* * {
     outline: 1px solid hotpink;
     border-radius: 10px;
-}
+} */
 
 /* global color variables */
 
@@ -44,6 +44,7 @@ main {
     border-radius: 3vmin;
     height: 90vh;
     width: 90vw;
+    max-width: 1000px;
     border: 2vmin solid var(--lightblue);
 }
 
@@ -55,32 +56,31 @@ main {
     justify-content: center;
 }
 
-.intro {
-    font-size: 2em;
-    color: var(--white);
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transition: opacity 0.5s ease;
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+img {
+    overflow: hidden;
+    max-height: 30vmin;
 }
 
 /* styles all buttons */
 
 button {
-    font-size: 1em;
+    font-size: 2rem;
     color: var(--white);
     background: none;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 3vmin;
+    margin: 3vmin;
+    border-radius: 10px;
 }
 
 /* scoreboard header */
 
 .score {
-    font-size: 2em;
+    font-size: 1rem;
     color: var(--white);
     width: 100%;
     display: flex;
@@ -99,10 +99,11 @@ button {
 
 .match {
     color: var(--white);
-    font-size: 2em;
+    font-size: 1em;
     width: 100%;
-    transform: translate(0%, -100%);
-    transition: opacity 0.5s ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* title and match status */
@@ -112,27 +113,22 @@ button {
     text-align: center;
 }
 
-.hands,
-.options {
+.hands {
     display: flex;
     justify-content: space-around;
     align-items: center;
     max-width: 100%;
 }
 
+.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 /* flip player hand image */
 
 .player-hand {
     transform: rotateY(180deg);
-}
-
-/* transitions */
-div.fadeOut {
-    opacity: 0;
-    pointer-events: none;
-}
-
-div.fadeIn {
-    opacity: 1;
-    pointer-events: all;
 }
