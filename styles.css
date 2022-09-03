@@ -1,7 +1,12 @@
 @import 'reset.css';
 
-/* global color variables */
+/* display outlines for dev */
+/* * {
+    outline: 1px solid hotpink;
+    border-radius: 10px;
+} */
 
+/* global color variables */
 html {
     --white: #f9faf8;
     --darkblue: #1f2937;
